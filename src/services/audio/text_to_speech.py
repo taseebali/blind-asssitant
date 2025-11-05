@@ -27,6 +27,12 @@ class TextToSpeech:
             text: Text to be converted to speech
         """
         if text:
+            # Clear old pending audio and add new one for immediate response
+            while not self.audio_queue.empty():
+                try:
+                    self.audio_queue.get_nowait()
+                except:
+                    break
             self.audio_queue.put(text)
 
     def _process_audio_queue(self):
@@ -44,25 +50,19 @@ class TextToSpeech:
         Args:
             text: Text to be converted and played
         """
-        print(f"Converting text to speech: {text}")
         try:
             # Create unique temp file for each audio
             temp_file = f"temp_audio_{int(time.time()*1000)}.mp3"
             
             tts = gTTS(text=text, lang='en', slow=False)
-            print("Saving audio file...")
             tts.save(temp_file)
             
-            print("Loading audio file...")
             pygame.mixer.music.load(temp_file)
-            print("Playing audio...")
             pygame.mixer.music.play()
             
             # Wait for playback to complete
             while pygame.mixer.music.get_busy():
                 time.sleep(0.1)
-                
-            print("Finished playing audio")
             
             # Make sure mixer is done before removing
             pygame.mixer.music.unload()

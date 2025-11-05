@@ -1,17 +1,41 @@
-opencv-python>=4.8.0
+# Blind Assistant - Dependencies
+# Python 3.11+ required
+
+# Core Dependencies
 numpy>=1.24.0
+pillow>=10.0.0
+requests>=2.31.0
+
+# Computer Vision
+opencv-python>=4.8.0
+
+# Deep Learning (Install PyTorch separately with CUDA support)
+# torch>=2.0.0
+# torchvision>=0.15.0
+# torchaudio>=2.0.0
+# Install with: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Object Detection
 ultralytics>=8.0.0
+
+# Text Recognition (currently disabled)
 easyocr>=1.7.0
+
+# Image Captioning (currently disabled)
+transformers>=4.33.0
+
+# Audio Output
 gTTS>=2.3.2
 pygame>=2.5.0
-openai-whisper>=1.1.10
-transformers>=4.33.0
-torch>=2.0.0
-fastapi>=0.103.0
-python-multipart>=0.0.6
-pillow>=10.0.0
-sounddevice>=0.4.6  # For audio capture
-scipy>=1.11.3       # For audio processing
-colorama>=0.4.6     # For colored terminal output
-pytest>=8.4.2
-requests>=2.31.0    # For IP camera connection
+
+# Audio Input (future feature)
+# openai-whisper>=1.1.10
+# sounddevice>=0.4.6
+# scipy>=1.11.3
+
+# Development & Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Utilities
+colorama>=0.4.6 

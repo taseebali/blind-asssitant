@@ -5,10 +5,81 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    volumes:
-      - ../src:/app/src
-    devices:
-      - /dev/video0:/dev/video0  # For webcam access
+    image: blind-assistant:latest
+    container_name: blind-assistant
+    
+    # GPU support (requires nvidia-docker2)
+    runtime: nvidia
+    
     environment:
-      - DISPLAY=${DISPLAY}  # For GUI display
-    network_mode: host  # For X11 forwarding
+      # Display for GUI (X11 forwarding)
+      - DISPLAY=${DISPLAY:-:0}
+      
+      # NVIDIA GPU configuration
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics
+      
+      # Python configuration
+      - PYTHONUNBUFFERED=1
+      
+      # Camera IP (override with your IP Webcam address)
+      - CAMERA_IP=${CAMERA_IP:-192.168.1.100}
+      
+      # Model configuration
+      - MODEL_NAME=${MODEL_NAME:-yolov8m.pt}
+      - CONFIDENCE_THRESHOLD=${CONFIDENCE_THRESHOLD:-0.30}
+      
+      # Display mode
+      - SHOW_DISPLAY=${SHOW_DISPLAY:-true}
+    
+    volumes:
+      # Mount source code for development
+      - ../src:/app/src:ro
+      
+      # Mount models directory (persistent)
+      - ../models:/app/models
+      
+      # Mount test data
+      - ../tests:/app/tests:ro
+      
+      # Mount output directory
+      - ../test_output:/app/test_output
+      
+      # X11 socket for GUI display
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      
+      # Shared memory for better performance
+      - /dev/shm:/dev/shm
+    
+    # Network mode for camera access and display
+    network_mode: host
+    
+    # Device access (optional, for USB cameras)
+    devices:
+      - /dev/video0:/dev/video0
+    
+    # IPC mode for X11
+    ipc: host
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Resource limits (adjust based on your GPU)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    
+    # Override command (optional)
+    # command: python run.py
+    
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "python", "-c", "import torch; assert torch.cuda.is_available()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

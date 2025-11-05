@@ -1,0 +1,99 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Models (download in container instead)
+models/*.pt
+*.pth
+*.onnx
+
+# Test outputs
+test_output/
+*.jpg
+*.png
+*.mp4
+*.avi
+
+# Logs
+logs/
+*.log
+
+# Audio files
+*.mp3
+*.wav
+temp_audio*.mp3
+
+# Documentation (not needed in container)
+docs/
+*.md
+!README.md
+
+# Docker files (don't copy into image)
+docker/
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Coverage reports
+htmlcov/
+.coverage
+.pytest_cache/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+
+# Development
+.env
+.env.local
+*.code-workspace
+
+# Large datasets
+datasets/
+data/
+*.zip
+*.tar.gz
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Release files
+RELEASE_NOTES.md
+CONTRIBUTING.md
+LICENSE
