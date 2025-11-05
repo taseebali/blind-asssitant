@@ -1,0 +1,167 @@
+{
+  "test_name": "tests.test_image_processing",
+  "timestamp": "20251104_132935",
+  "platform": "win32",
+  "python_version": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "steps": [
+    {
+      "name": "Test Start",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:35.239981",
+      "details": {
+        "description": "Full Image Processing Pipeline Test"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:35.240980",
+      "details": {
+        "message": "Loading test image from C:\\Development\\AI PROJECTS\\BlindAssitant\\tests\\test_data\\test_image.jpg"
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:35.282949",
+      "details": {
+        "message": "Image loaded successfully"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:35.284616",
+      "details": {
+        "message": "Running object detection..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:36.590409",
+      "details": {
+        "message": "Found 3 objects"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:36.590409",
+      "details": {
+        "message": "Detected chair with confidence: 0.89"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:36.591918",
+      "details": {
+        "message": "Detected desk with confidence: 0.66"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:36.591918",
+      "details": {
+        "message": "Detected scissors with confidence: 0.52"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:36.592923",
+      "details": {
+        "message": "Running text detection..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:46.346364",
+      "details": {
+        "message": "Found 3 text regions"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:46.347873",
+      "details": {
+        "message": "Detected text: 'scisscrs 0.52' with confidence: 0.53"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:46.347873",
+      "details": {
+        "message": "Detected text: 'chair 0.89' with confidence: 0.92"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:46.348889",
+      "details": {
+        "message": "Detected text: 'dining table 0.66' with confidence: 0.87"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:46.349484",
+      "details": {
+        "message": "Generating image caption..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:47.134661",
+      "details": {
+        "message": "Generated caption: a desk with a lamp on it in front of a window (confidence: 1.00)"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:47.136148",
+      "details": {
+        "message": "Creating narration..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:47.137225",
+      "details": {
+        "message": "Generated narration: a desk with a lamp on it in front of a window"
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:47.152200",
+      "details": {
+        "message": "Saved annotated image to C:\\Development\\AI PROJECTS\\BlindAssitant\\tests\\test_output\\annotated_test_image.jpg"
+      }
+    },
+    {
+      "name": "Test End",
+      "status": "success",
+      "timestamp": "2025-11-04T13:29:47.152714",
+      "details": {
+        "final_status": "success"
+      }
+    }
+  ],
+  "summary": {
+    "total_steps": 19,
+    "successful_steps": 19,
+    "failed_steps": 0,
+    "start_time": "2025-11-04T13:29:35.239981",
+    "end_time": "2025-11-04T13:29:47.152714"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "test_name": "tests.test_image_processing",
+  "timestamp": "20251105_112849",
+  "platform": "win32",
+  "python_version": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "steps": [
+    {
+      "name": "Test Start",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:49.699170",
+      "details": {
+        "description": "Full Image Processing Pipeline Test"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:49.699170",
+      "details": {
+        "message": "Loading test image from C:\\Development\\AI PROJECTS\\BlindAssitant\\tests\\test_data\\test_image.jpg"
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:49.741058",
+      "details": {
+        "message": "Image loaded successfully"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:49.742059",
+      "details": {
+        "message": "Running object detection..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:50.542857",
+      "details": {
+        "message": "Found 1 objects"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:50.542857",
+      "details": {
+        "message": "Detected refrigerator with confidence: 0.93"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:50.543850",
+      "details": {
+        "message": "Running text detection..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:59.942191",
+      "details": {
+        "message": "Found 1 text regions"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:59.943191",
+      "details": {
+        "message": "Detected text: 'refrigerator 0.93' with confidence: 0.55"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:28:59.944192",
+      "details": {
+        "message": "Generating image caption..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.680374",
+      "details": {
+        "message": "Generated caption: a black and silver machine sitting next to a white wall (confidence: 1.00)"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.681382",
+      "details": {
+        "message": "Creating narration..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.681382",
+      "details": {
+        "message": "Generated narration: a black and silver machine sitting next to a white wall"
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.695994",
+      "details": {
+        "message": "Saved annotated image to C:\\Development\\AI PROJECTS\\BlindAssitant\\tests\\test_output\\annotated_test_image.jpg"
+      }
+    },
+    {
+      "name": "Test End",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.696584",
+      "details": {
+        "final_status": "success"
+      }
+    }
+  ],
+  "summary": {
+    "total_steps": 15,
+    "successful_steps": 15,
+    "failed_steps": 0,
+    "start_time": "2025-11-05T11:28:49.699170",
+    "end_time": "2025-11-05T11:29:00.696584"
+  }
+}

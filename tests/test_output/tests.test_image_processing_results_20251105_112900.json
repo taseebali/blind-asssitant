@@ -1,0 +1,127 @@
+{
+  "test_name": "tests.test_image_processing",
+  "timestamp": "20251105_112900",
+  "platform": "win32",
+  "python_version": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "steps": [
+    {
+      "name": "Test Start",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.698773",
+      "details": {
+        "description": "Individual Services Test"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.700287",
+      "details": {
+        "message": "Loading test image from C:\\Development\\AI PROJECTS\\BlindAssitant\\tests\\test_data\\test_image.jpg"
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.725856",
+      "details": {
+        "message": "Image loaded successfully"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.726865",
+      "details": {
+        "message": "Testing Object Detector..."
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.747548",
+      "details": {
+        "message": "Validated object detector output type"
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.748549",
+      "details": {
+        "message": "Object detector returned 1 valid detections"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:00.748549",
+      "details": {
+        "message": "Testing Text Detector..."
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:01.418955",
+      "details": {
+        "message": "Validated text detector output type"
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:01.418955",
+      "details": {
+        "message": "Text detector returned 0 valid text regions"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:01.419947",
+      "details": {
+        "message": "Testing Caption Generator..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:01.832506",
+      "details": {
+        "message": "Caption generated successfully with confidence: 1.00"
+      }
+    },
+    {
+      "name": "Info",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:01.833022",
+      "details": {
+        "message": "Testing Narration Service..."
+      }
+    },
+    {
+      "name": "Success",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:01.834028",
+      "details": {
+        "message": "Narration generated successfully"
+      }
+    },
+    {
+      "name": "Test End",
+      "status": "success",
+      "timestamp": "2025-11-05T11:29:01.834028",
+      "details": {
+        "final_status": "success"
+      }
+    }
+  ],
+  "summary": {
+    "total_steps": 14,
+    "successful_steps": 14,
+    "failed_steps": 0,
+    "start_time": "2025-11-05T11:29:00.698773",
+    "end_time": "2025-11-05T11:29:01.835034"
+  }
+}

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  blind-assistant:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../src:/app/src
+    devices:
+      - /dev/video0:/dev/video0  # For webcam access
+    environment:
+      - DISPLAY=${DISPLAY}  # For GUI display
+    network_mode: host  # For X11 forwarding
