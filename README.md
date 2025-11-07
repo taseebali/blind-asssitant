@@ -23,10 +23,9 @@
 - **🎛️ Configurable Modes** - Toggle captioning and display for different performance profiles
 
 ### 🚧 In Development
-- Text Recognition (OCR) - Disabled due to compatibility issues (planned fix)
-- Voice Commands - Model ready but not integrated yet
-- TensorRT Optimization - Target 10+ FPS on laptop
-- Mobile App Development - Android/iOS deployment
+- Text Recognition (OCR) - Currently disabled due to compatibility issues
+- Voice Commands - Model loaded but not integrated
+- Image Captioning - Available but disabled for performance
 
 ## 📋 Table of Contents
 - [Demo](#-demo)
